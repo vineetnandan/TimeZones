@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="timeZoneApp">
+
+  <head>
+    <title>TimeZone</title>
+    <script src="http://code.angularjs.org/1.2.12/angular.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h2>Time Zones</h2>
+    </header>
+    <div id="container" ng-controller="ctrl">
+      <div class="label">
+      Coordinated Universal time : {{dateToUTCDate | date:'dd-M-yyyy H:mm'}}
+      </div>
+      <div class="label">
+      Local Time : {{date | date:'dd-M-yyyy H:mm'}}
+      </div>
+      <div class="menu">
+        <label>Select Timezone</label>
+        <select id="timeZoneList" ng-model="selectedTimeZoneValue">
+          <option ng-repeat="timeZone in timeZones" ng-value="timeZone.value">
+            <li>{{timeZone.value}}</li>
+          </option>
+        </select>
+      </div>
+      <div ng-if="showSelectedTime" class="time">
+        <p>
+          <h3>The current time in {{selectedTimeZoneValue}} :</h3><span ng-model="showdate">{{showdate}}</span>
+        </p>
+      </div>
+    </div>
+  </body>
+
+</html>

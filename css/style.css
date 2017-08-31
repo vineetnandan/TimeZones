@@ -1,0 +1,43 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background: #fff;
+}
+#container{
+padding:20px;
+font-family: 'Arial' sans-serif;
+font-weight: bold;
+color: #fff;
+}
+header{
+	padding:15px;
+	background:#2f2f1e;
+}
+h2{
+	font-weight: bold;
+	font-size: 28px;
+	color: #fff;
+	text-align: center;
+}
+.label{
+	margin:15px 0;
+	background:#2f2f1e;
+	font-size: 24px;
+	padding: 10px;
+	border-radius: 6px; 
+}
+.menu{
+	display: inline-block;
+	margin:20px auto;
+	background:#2f2f1e;
+	padding: 10px;
+	border-radius: 6px;
+}
+.time{
+	border-radius: 6px;
+	background:#2f2f1e;
+	font-size: 24px;
+	padding: 10px;
+}
